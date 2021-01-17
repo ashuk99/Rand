@@ -21,7 +21,7 @@ def main():
             print("Money shorted!")
             continue
         else:
-            print(payback(int(change)))
+            print(payback(int(change + 1)))
             break
 
 
