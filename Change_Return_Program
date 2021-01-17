@@ -1,0 +1,29 @@
+def payback(cash):
+    q = int(cash / 25)
+    cash -= q * 25
+    d = int(cash / 10)
+    cash -= d * 10
+    n = int(cash / 5)
+    cash -= n * 5
+    p = int(cash)
+
+    return str(q) + " quarters\n" + str(d) + " dimes\n" + str(n) + " nickels\n" + str(p) + " pennies\n"
+
+
+def main():
+    while True:
+
+        cost = float(input("Enter the cost amount?"))
+        money = float(input("Enter the amount cash?"))
+        change = (money - cost) * 100
+
+        if change < 0:
+            print("Money shorted!")
+            continue
+        else:
+            print(payback(int(change)))
+            break
+
+
+if __name__ == '__main__':
+    main()
